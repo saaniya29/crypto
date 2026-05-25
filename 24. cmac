@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+char s[100];
+int mac=0;
+printf("Enter message: ");
+gets(s);
+for(int i=0;s[i];i++)
+mac+=s[i];
+
+printf("Generated MAC: %X",mac);
+}
