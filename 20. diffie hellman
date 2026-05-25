@@ -1,0 +1,29 @@
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+int p,g,a,b,A,B,k1,k2;
+
+printf("Enter prime number: ");
+scanf("%d",&p);
+
+printf("Enter primitive root: ");
+scanf("%d",&g);
+
+printf("Enter private key of A: ");
+scanf("%d",&a);
+
+printf("Enter private key of B: ");
+scanf("%d",&b);
+
+A=(int)pow(g,a)%p;
+B=(int)pow(g,b)%p;
+
+k1=(int)pow(B,a)%p;
+k2=(int)pow(A,b)%p;
+
+printf("\nPublic Key of A: %d",A);
+printf("\nPublic Key of B: %d",B);
+printf("\nShared Key for A: %d",k1);
+printf("\nShared Key for B: %d",k2);
+}
