@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+char a[]="QWERTYUIOPASDFGHJKLZXCVBNM",s[100];
+int i;
+printf("Enter UPPERCASE text: ");
+gets(s);
+for(i=0;s[i];i++)
+if(s[i]>='A'&&s[i]<='Z') s[i]=a[s[i]-65];
+printf("Cipher Text: %s",s);
+}
