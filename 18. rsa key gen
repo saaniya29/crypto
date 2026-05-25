@@ -1,0 +1,13 @@
+#include<stdio.h>
+
+int main(){
+int p=3,q=11,n,e=7,d=3,phi;
+phi=(p-1)*(q-1);
+n=p*q;
+printf("p = %d",p);
+printf("\nq = %d",q);
+printf("\nn = %d",n);
+printf("\nphi = %d",phi);
+printf("\nPublic Key = (%d,%d)",e,n);
+printf("\nPrivate Key = (%d,%d)",d,n);
+}
