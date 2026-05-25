@@ -1,0 +1,33 @@
+#include<stdio.h>
+#include<string.h>
+
+void ecb(char s[]){
+    char t[100];
+    strcpy(t,s);
+    for(int i=0;t[i];i++)
+        t[i]=t[i]+3;
+    printf("\nECB Encrypted: %s",t);
+}
+
+void cbc(char s[]){
+    char t[100];
+    int iv=5;
+    strcpy(t,s);
+    for(int i=0;t[i];i++){
+        t[i]=t[i]^iv;
+        iv=t[i];
+    }
+
+    printf("\nCBC Encrypted: ");
+    for(int i=0;t[i];i++)
+        printf("%d ",t[i]);
+}
+
+int main(){
+    char s[100];
+    printf("Enter text: ");
+    gets(s);
+    ecb(s);
+    cbc(s);
+    return 0;
+}
