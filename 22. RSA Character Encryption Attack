@@ -1,0 +1,14 @@
+#include<stdio.h>
+#include<math.h>
+
+int main(){
+int p=3,q=11,n,e=7,m,c;
+n=p*q;
+printf("Enter number: ");
+scanf("%d",&m);
+c=(int)pow(m,e)%n;
+printf("Encrypted: %d",c);
+for(int i=0;i<n;i++)
+if((int)pow(i,e)%n==c)
+printf("\nAttack Found Message: %d",i);
+}
