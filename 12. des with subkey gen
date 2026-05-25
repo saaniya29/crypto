@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+char k[20];
+printf("Enter key: ");
+scanf("%s",k);
+printf("Subkeys:\n");
+for(int i=0;i<16;i++)
+printf("K%d = %c%c%c%c\n",i+1,k[i%strlen(k)],k[(i+1)%strlen(k)],k[(i+2)%strlen(k)],k[(i+3)%strlen(k)]);
+}
