@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<string.h>
+char m[5][5]={"MONAR","CHYBD","EFGIK","LPQST","UVWXZ"};
+void pos(char c,int *r,int *c2){
+    if(c=='J') c='I';
+    for(int i=0;i<5;i++)
+    for(int j=0;j<5;j++)
+    if(m[i][j]==c){*r=i;*c2=j;}
+}
+
+int main(){
+    char s[100];
+    int r1,c1,r2,c2;
+    printf("Enter 2-letter text: ");
+    scanf("%s",s);
+    pos(s[0],&r1,&c1);
+    pos(s[1],&r2,&c2);
+    printf("\nEncrypted Text: ");
+    if(r1==r2)
+        printf("%c%c",m[r1][(c1+1)%5],m[r2][(c2+1)%5]);
+    else if(c1==c2)
+        printf("%c%c",m[(r1+1)%5][c1],m[(r2+1)%5][c2]);
+    else
+        printf("%c%c",m[r1][c2],m[r2][c1]);
+
+    return 0;
+}
