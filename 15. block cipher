@@ -1,0 +1,9 @@
+#include<stdio.h>
+#include<string.h>
+int main(){
+char s[100];
+printf("Enter text: ");
+gets(s);
+printf("Encrypted Block: ");
+for(int i=0;s[i];i++) printf("%c",s[i]+1);
+}
